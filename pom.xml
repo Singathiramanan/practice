@@ -5,7 +5,7 @@
 	<artifactId> practice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<dependencies>
-		
+
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -38,6 +38,14 @@
 									<suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
 								</suiteXmlFiles>
 							</configuration>
+						</plugin>
+						<plugin>
+							<artifactId>maven-resources-plugin</artifactId>
+							<version>3.0.2</version>
+						</plugin>
+						<plugin>
+							<artifactId>maven-compiler-plugin</artifactId>
+							<version>3.8.0</version>
 						</plugin>
 					</plugins>
 				</pluginManagement>
