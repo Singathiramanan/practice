@@ -24,6 +24,12 @@ public class Script1Test {
 		System.out.println("Sample3");
 
 	}
+	@Test(groups = "SmokeTest")
+	public void test()
+	{
+		System.out.println();
+	}
+
 	
 
 }
