@@ -1,5 +1,6 @@
 package com.mock1;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -22,10 +23,11 @@ public class handleNotificationPopup {
 		//prefs.put("credentials_enable_services", false);
 		//prefs.put("profile.password_manager_enabled", false);
 		options.setExperimentalOption("prefs", prefs);
+		options.setExperimentalOption("excludeSwitches"	, Collections.singletonList("enable-automation"));
 		//options.addArguments("--disable-notificatons");
 		//options.addArguments("--disable-extensions");
-		options.addArguments("disable-infobars");
-		//options.addArguments("start-maximized");
+		options.addArguments("--disable-infobars");
+		options.addArguments("start-maximized");
 		WebDriver driver=new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.get("https://mictests.com/");
