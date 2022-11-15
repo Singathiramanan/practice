@@ -10,13 +10,15 @@ import org.testng.annotations.Test;
 
 public class RemoteConnection {
 	@Test
-	public void RC1_Test() throws MalformedURLException{
-		URL url = new URL("http://Localhost:4444/wd/hub");
+	public void RC1_Test() throws MalformedURLException, InterruptedException{
+		URL url = new URL("http://13.233.116.234:4444/wd/hub");
 		DesiredCapabilities cap=new DesiredCapabilities();
-		cap.setBrowserName("firefox");
+		cap.setBrowserName("chrome");
 		cap.setPlatform(Platform.WINDOWS);
 		RemoteWebDriver driver=new RemoteWebDriver(url, cap);
 		driver.get("https://www.gmail.com");
+		Thread.sleep(5000);
+		driver.quit();
 		
 	}
 }
